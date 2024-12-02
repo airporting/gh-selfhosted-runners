@@ -1,3 +1,7 @@
+read -p "Enter your GitHub token: " token
+
+echo "MR_GITHUB_PAT=\"$token\"" > .env
+
 echo "downloading multi-runners tool"
 git clone https://github.com/vbem/multi-runners.git
 
