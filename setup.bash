@@ -4,6 +4,9 @@ cd "$parent_path"
 
 read -p "Enter your GitHub token: " token
 
+echo "installing deps"
+sudo apt-get install jq
+
 echo "downloading multi-runners tool"
 git clone https://github.com/vbem/multi-runners.git
 
