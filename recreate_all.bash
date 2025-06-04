@@ -13,3 +13,9 @@ do
   bash multi-runners/mr.bash del --user runner-$i
   bash multi-runners/mr.bash add --org airporting ${KEEP_LABELS:+--labels "$KEEP_LABELS"}
 done
+
+# just make sure to delete outstanding runners in case of decrease
+for i in {5..10}
+do
+  bash multi-runners/mr.bash del --user runner-$i
+done
