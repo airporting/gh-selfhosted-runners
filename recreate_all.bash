@@ -3,6 +3,8 @@
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
+bash ./setup_cron.bash
+
 for i in {0..4}
 do
   LABELS=$(bash ./labels.bash runner-$i)
