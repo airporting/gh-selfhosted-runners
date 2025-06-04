@@ -3,7 +3,7 @@
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
-for i in {0..7}
+for i in {0..4}
 do
   LABELS=$(bash ./labels.bash runner-$i)
   KEEP_LABELS=$(echo $LABELS | jq -r '[.[] | select(startswith("repo"))] | join(",")')
