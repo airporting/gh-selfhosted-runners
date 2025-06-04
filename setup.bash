@@ -12,8 +12,7 @@ git clone https://github.com/vbem/multi-runners.git
 
 echo "MR_GITHUB_PAT=\"$token\"" > multi-runners/.env
 
-echo "adding recreate_all job to crontab"
-(crontab -l 2>/dev/null; echo "0 21 * * SUN,WED bash $(readlink -e recreate_all.bash) 2>&1 | logger -t CRON") | crontab -
+bash setup_cron.bash
 
 echo "creating runners for the first time"
 bash recreate_all.bash
